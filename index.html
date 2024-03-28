@@ -13,8 +13,8 @@
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Post A Blog</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">Add New Post</a></li>
+            <li><a href="#">Blog</a></li>
         </ul>
     </nav>
 </header>
@@ -23,20 +23,21 @@
     <h2>Post a blog</h2>
     <form action="#" method="post">
         <label for="username">User Name</label>
-        <input type="text" id="name" name="username" required>
+        <input type="text" id="user-name" name="username" required>
         <label for="email">Email</label>
         <input type="email" id="email" name="email" required>
         <label for="title">Post Title</label>
         <input type="text" id="blog-post-title" name="blog-post-title" required>
         <label for="post-content">Content</label>
-        <textarea id="content" name="content" required></textarea>
-        <button type="submit">Submit</button>
+        <textarea id="post-content" name="post-content" required></textarea>
+        <button type="submit" id="save">Submit</button>
     </form>
 </section>
 
 <footer>
     <a href="https://github.com/amandeepsandhu13/portfolio">Portfolio</a>
 </footer>
+<script src="assets/js/form.js"></script>
 <script src="assets/js/blog.js"></script>
 </body>
 </html>
