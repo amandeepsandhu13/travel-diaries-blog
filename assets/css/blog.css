@@ -43,3 +43,20 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
+
+/**************toggle background css**************/
+
+/* Light mode styles */
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #000000;
+    color: #000000;
+    
+}
+
