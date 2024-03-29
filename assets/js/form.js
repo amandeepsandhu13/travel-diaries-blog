@@ -39,7 +39,8 @@ saveButton.addEventListener('click', function (event) {
         alert('Please fill in all required fields.');
     }else{
         savePost(blogPost);
-        alert('Post added successfully!');
+        //alert('Post added successfully!');
+        window.location.href = 'blog.html';
     }
        
     form.reset();
