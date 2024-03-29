@@ -4,8 +4,19 @@
 
 ## index.html contains a form with labels and inputs for username, blog title, and blog content and blog.html displays all the submitted posts.
 
-# following snapshots shows sucessful submission of the post.
+# following snapshots shows form to submit the post.
+
+assets\images\form.png
 
 # following snapshot showing all the posts
 
+assets\images\blog.png
+
 # on the blog page header , there is toggle button to change the background color of the blog.html page
+
+assets\images\toggle.png
+
+# Style.css contains style for index.html page
+# toggle.js has toggle script
+# form.js has save post script method
+# blog.js has render posts method
