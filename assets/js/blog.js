@@ -1,12 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const blogPostsContainer = document.getElementById('blogPosts');
 
+    const blogPostsContainer = document.querySelector('#blogPosts');
 
     // Function to render blog posts
     function renderBlogPosts() {
+        
         const savedData = JSON.parse(localStorage.getItem('blogPost')) || [];
 
-        if(savedData != null){
+        if (savedData.length === 0) {
+            let postElement = document.createElement('article');
+            postElement.innerHTML = `
+                <p>No Post Added</p>
+            `; blogPostsContainer.append(postElement);
+        }else{
             savedData.forEach(post => {
                 const postElement = document.createElement('article');
                 postElement.innerHTML = `
@@ -15,19 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 `;
                 blogPostsContainer.append(postElement);
             });
-        } else{
-            const postElement = document.createElement('article');
-            postElement.innerHTML = `
-                <h2 class="blog-user"></h2>
-                <p>No Post Added</p>
-            `;
-        }
 
+        }
     }
     renderBlogPosts();
 });
-
-
-
-
-
