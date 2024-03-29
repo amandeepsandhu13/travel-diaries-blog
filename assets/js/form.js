@@ -1,15 +1,11 @@
 let username = document.getElementById('user-name');
 let postTitle = document.getElementById('blog-post-title');
 let postContent = document.getElementById('post-content');
-const saveButton = document.getElementById('save');
-
-/************** blog page elements ************/
-
-let blogUserName = document.querySelector('.blog-user');
-
-//let postedDataString = "";
+const saveButton = document.querySelector('#save');
+const form = document.getElementById('post-form');
 
 function savePost(blogPost) {
+
     let postedData = localStorage.getItem('blogPost');
     
     // Check if there's existing data in local storage
@@ -35,12 +31,18 @@ saveButton.addEventListener('click', function (event) {
     let blogPost = {
         username: username.value.trim(),
         postTitle: postTitle.value.trim(),
-        postContent: postContent.value.trim(), }
-       
+        postContent: postContent.value.trim(), 
+    }
 
-    savePost(blogPost);
-    document.getElementById('post-form').reset();
-    //renderSavedPost1();
+    if (!form.checkValidity()) {
+        event.preventDefault(); 
+        alert('Please fill in all required fields.');
+    }else{
+        savePost(blogPost);
+        alert('Post added successfully!');
+    }
+       
+    form.reset();
   });
 
  
