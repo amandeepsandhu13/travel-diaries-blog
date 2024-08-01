@@ -20,3 +20,9 @@ assets\images\toggle.png
 ### toggle.js has toggle script
 ### form.js has save post script method
 ### blog.js has render posts method
+
+### site is live at 
+https://amandeepsandhu13.github.io/travel-diaries-blog/
+
+### github link
+https://github.com/amandeepsandhu13/travel-diaries-blog
